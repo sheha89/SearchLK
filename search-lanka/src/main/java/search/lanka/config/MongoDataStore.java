@@ -6,6 +6,8 @@ import com.github.jmkgreen.morphia.Morphia;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.Mongo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 import java.net.UnknownHostException;
@@ -15,7 +17,7 @@ import java.net.UnknownHostException;
  *
  */
 public class MongoDataStore {
-//    private static final Logger LOGGER = LoggerFactory.getLogger(MongoDataStore.class);
+   private static final Logger LOGGER = LoggerFactory.getLogger(MongoDataStore.class);
     private int port;
     private String host;
     private String dbName;
@@ -28,7 +30,7 @@ public class MongoDataStore {
      * @throws UnknownHostException
      */
     public void init() throws UnknownHostException {
-//        LOGGER.info("Initializing MongoDB connection to[{}:{}/{}]", new Object[]{host, port, dbName});
+        LOGGER.info("Initializing MongoDB connection to[{}:{}/{}]", new Object[]{host, port, dbName});
         this.mongoDb = new Mongo(host, port);
         this.dataStore = new Morphia().createDatastore(this.mongoDb, dbName);
         this.dataStore.ensureIndexes();

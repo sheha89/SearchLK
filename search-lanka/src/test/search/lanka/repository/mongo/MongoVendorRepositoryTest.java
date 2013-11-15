@@ -24,7 +24,6 @@ public class MongoVendorRepositoryTest extends AbstractMongoRepositoryTest{
 
     @Test
     public void testSave() throws Exception {
-
         String id = "V001";
         String name = "temp";
         String about = "about temp";
@@ -46,7 +45,7 @@ public class MongoVendorRepositoryTest extends AbstractMongoRepositoryTest{
         mongoVendorRepository.save(vendor);
 
         Optional<Vendor> tempVendor = mongoVendorRepository.findVendorsById(id);
-        assertTrue("App should be available in db", tempVendor.isPresent());
+        assertTrue("Vendor should be available in db", tempVendor.isPresent());
         assertThat(name, is(tempVendor.get().getName()));
     }
 
