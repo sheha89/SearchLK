@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+<bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:properties/db.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="mongoDataStore" class="search.lanka.config.MongoDataStore"
+          init-method="init" p:host="${mongoDb.host}" p:port="${mongoDb.port}"
+          p:dbName="${mongoDb.dbName}"/>
+
+    <bean id="mongoVendorRepository"
+          class="search.lanka.repository.mongo.MongoVendorRepository">
+        <constructor-arg index="0" ref="mongoDataStore"/>
+    </bean>
+
+</beans>

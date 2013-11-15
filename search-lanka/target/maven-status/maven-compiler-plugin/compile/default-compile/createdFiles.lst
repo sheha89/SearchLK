@@ -1,0 +1,4 @@
+search/lanka/model/Vendor.class
+search/lanka/repository/mongo/MongoVendorRepository.class
+search/lanka/config/MongoDataStore.class
+search/lanka/repository/VendorRepository.class

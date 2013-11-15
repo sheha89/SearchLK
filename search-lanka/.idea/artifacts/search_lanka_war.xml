@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="search-lanka:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="search-lanka.war">
+      <element id="artifact" artifact-name="search-lanka:war exploded" />
+    </root>
+  </artifact>
+</component>
