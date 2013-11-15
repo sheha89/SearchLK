@@ -12,16 +12,16 @@
         </property>
     </bean>
 
-    <bean id="mongoDataStore" class="search.lanka.config.MongoDataStore"
+    <bean id="mongoDataStore" class="search.lanka.core.config.MongoDataStore"
           init-method="init" p:host="${mongoDb.host}" p:port="${mongoDb.port}"
           p:dbName="${mongoDb.dbName}"/>
 
     <bean id="mongoVendorRepository"
-          class="search.lanka.repository.mongo.MongoVendorRepository">
+          class="search.lanka.core.repository.mongo.MongoVendorRepository">
         <constructor-arg index="0" ref="mongoDataStore"/>
     </bean>
 
-    <bean id="mongoVendorPostRepository" class="search.lanka.repository.mongo.MongoVendorPostRepository">
+    <bean id="mongoVendorPostRepository" class="search.lanka.core.repository.mongo.MongoVendorPostRepository">
         <constructor-arg index="0" ref="mongoDataStore"/>
     </bean>
 

@@ -1,6 +1,6 @@
-package search.lanka.repository;
+package search.lanka.core.repository;
 
-import search.lanka.model.Vendor;
+import search.lanka.core.domain.Vendor;
 
 import com.google.common.base.Optional;
 

@@ -1,10 +1,10 @@
 search/lanka/service/VendorService.class
-search/lanka/model/Vendor.class
-search/lanka/repository/mongo/MongoVendorPostRepository.class
+search/lanka/core/repository/VendorPostRepository.class
+search/lanka/core/config/MongoDataStore.class
+search/lanka/core/repository/VendorRepository.class
+search/lanka/core/domain/VendorPost.class
 search/lanka/controller/VendorProfileController.class
-search/lanka/repository/VendorPostRepository.class
-search/lanka/repository/mongo/MongoVendorRepository.class
-search/lanka/config/MongoDataStore.class
-search/lanka/model/VendorPost.class
+search/lanka/core/repository/mongo/MongoVendorRepository.class
+search/lanka/core/domain/Vendor.class
+search/lanka/core/repository/mongo/MongoVendorPostRepository.class
 search/lanka/service/impl/VendorServiceImpl.class
-search/lanka/repository/VendorRepository.class

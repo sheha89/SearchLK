@@ -1,9 +1,9 @@
-package search.lanka.repository.mongo;
+package search.lanka.core.repository.mongo;
 
 import com.google.common.base.Optional;
 import org.junit.Before;
 import org.junit.Test;
-import search.lanka.model.Vendor;
+import search.lanka.core.domain.Vendor;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;

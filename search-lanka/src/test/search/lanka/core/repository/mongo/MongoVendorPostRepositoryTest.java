@@ -1,8 +1,8 @@
-package search.lanka.repository.mongo;
+package search.lanka.core.repository.mongo;
 
 import org.junit.Before;
 import org.junit.Test;
-import search.lanka.model.VendorPost;
+import search.lanka.core.domain.VendorPost;
 
 import java.util.List;
 

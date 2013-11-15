@@ -1,4 +1,4 @@
-package search.lanka.config;
+package search.lanka.core.config;
 
 
 import com.github.jmkgreen.morphia.Datastore;

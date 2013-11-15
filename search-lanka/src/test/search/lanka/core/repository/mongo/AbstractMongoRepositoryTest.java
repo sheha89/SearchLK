@@ -1,7 +1,7 @@
-package search.lanka.repository.mongo;
+package search.lanka.core.repository.mongo;
 
 import org.junit.BeforeClass;
-import search.lanka.config.MongoDataStore;
+import search.lanka.core.config.MongoDataStore;
 
 import java.net.UnknownHostException;
 

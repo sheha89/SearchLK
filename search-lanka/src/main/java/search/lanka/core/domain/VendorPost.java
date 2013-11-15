@@ -1,4 +1,4 @@
-package search.lanka.model;
+package search.lanka.core.domain;
 
 /**
  *

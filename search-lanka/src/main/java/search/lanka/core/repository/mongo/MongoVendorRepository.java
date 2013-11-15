@@ -1,13 +1,13 @@
-package search.lanka.repository.mongo;
+package search.lanka.core.repository.mongo;
 
 import com.github.jmkgreen.morphia.Key;
 import com.github.jmkgreen.morphia.dao.BasicDAO;
 import com.google.common.base.Optional;
 import com.mongodb.WriteConcern;
 import org.bson.types.ObjectId;
-import search.lanka.config.MongoDataStore;
-import search.lanka.model.Vendor;
-import search.lanka.repository.VendorRepository;
+import search.lanka.core.config.MongoDataStore;
+import search.lanka.core.domain.Vendor;
+import search.lanka.core.repository.VendorRepository;
 
 /**
  *

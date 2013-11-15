@@ -1,6 +1,6 @@
-package search.lanka.repository;
+package search.lanka.core.repository;
 
-import search.lanka.model.VendorPost;
+import search.lanka.core.domain.VendorPost;
 
 import java.util.List;
 

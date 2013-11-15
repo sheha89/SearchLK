@@ -1,8 +1,8 @@
 package search.lanka.service.impl;
 
-import search.lanka.model.VendorPost;
-import search.lanka.repository.mongo.MongoVendorPostRepository;
-import search.lanka.repository.mongo.MongoVendorRepository;
+import search.lanka.core.domain.VendorPost;
+import search.lanka.core.repository.mongo.MongoVendorPostRepository;
+import search.lanka.core.repository.mongo.MongoVendorRepository;
 import search.lanka.service.VendorService;
 
 import java.util.List;
