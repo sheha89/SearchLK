@@ -8,7 +8,7 @@
     <file path="/a.dummy" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384509139541" ignored="false" />
     <file path="/Dummy.txt" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384509009002" ignored="false" />
     <file path="$USER_HOME$/HsenidProjects/broadcast-engine/modules/core/todo.md" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384406912356" ignored="false" />
-    <file path="/todo.md" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384512390304" ignored="false" />
+    <file path="/todo.md" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1385080941281" ignored="false" />
     <file path="$USER_HOME$/HsenidProjects/broadcast-engine/modules/core/pom.xml" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384408803352" ignored="false" />
     <file path="/hms/apps/bulk-messenger/modules/pom.xml" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384428276268" ignored="false" />
     <file path="/hms/apps/bulk-messenger/modules/bulk-messenger-server/src/main/resources/bulk-messenger.properties" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384428297814" ignored="false" />
@@ -36,20 +36,22 @@
     <file path="/VenderRepository.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384438816576" ignored="false" />
     <file path="/MongoVenderRepository.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384438933328" ignored="false" />
     <file path="/MongoVendorRepository.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384438882128" ignored="false" />
-    <file path="/fragment.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384595160038" ignored="false" />
+    <file path="/fragment.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1385079917231" ignored="false" />
     <file path="/MongoVendorRepositoryTest.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384439249246" ignored="false" />
     <file path="/AbstractMongoRepositoryTest.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384437933042" ignored="false" />
     <file path="/Vendor.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384594997271" ignored="false" />
     <file path="/VendoPost.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384499478727" ignored="false" />
     <file path="/VendorPost.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384499460345" ignored="false" />
-    <file path="/VendorPostRepository.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384498782543" ignored="false" />
+    <file path="/VendorPostRepository.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1385081303332" ignored="false" />
     <file path="/MongoVendorPostRepository.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384499531566" ignored="false" />
     <file path="/MongoVendorPostRepositoryTest.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384500831677" ignored="false" />
     <file path="/log4j.xml" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384510120951" ignored="false" />
     <file path="/VendorService.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384511375516" ignored="false" />
     <file path="/VendorServiceImpl.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384511375807" ignored="false" />
-    <file path="/Tag.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384595098540" ignored="false" />
+    <file path="/Tag.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1385078358434" ignored="false" />
     <file path="/Address.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1384595293717" ignored="false" />
+    <file path="/TagRepository.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1385081368845" ignored="false" />
+    <file path="/VendorRepository.java" changelist="53de9a0e-31ce-45ff-b8b3-37fdb7163c9e" time="1385081463523" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,37 +110,7 @@
     <favorites_list name="search-lanka" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Tag.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/domain/Tag.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="31" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Location.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/domain/Location.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="69" selection-start="277" selection-end="277" vertical-scroll-proportion="0.38908452">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vendor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/domain/Vendor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="14" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -148,22 +120,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/search/lanka/repository/mongo/MongoVendorRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/properties/logging.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/search/lanka/model/Vendor.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/search/lanka/config/MongoDataStore.java" />
-        <option value="$PROJECT_DIR$/src/main/java/search/lanka/service/impl/VendorService.java" />
         <option value="$PROJECT_DIR$/src/main/java/search/lanka/service/VendorService.java" />
         <option value="$PROJECT_DIR$/src/main/java/search/lanka/service/impl/VendorServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/search-lanka-context.xml" />
-        <option value="$PROJECT_DIR$/todo.md" />
         <option value="$PROJECT_DIR$/src/main/java/search/lanka/controller/VendorProfileController.java" />
         <option value="$PROJECT_DIR$/src/main/java/search/lanka/core/domain/Vendor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/search/lanka/core/domain/Tag.java" />
         <option value="$PROJECT_DIR$/src/main/java/search/lanka/core/domain/Address.java" />
+        <option value="$PROJECT_DIR$/src/main/java/search/lanka/core/domain/Tag.java" />
         <option value="$PROJECT_DIR$/src/main/java/search/lanka/core/domain/Location.java" />
+        <option value="$PROJECT_DIR$/src/main/java/search/lanka/core/domain/VendorPost.java" />
+        <option value="$PROJECT_DIR$/todo.md" />
+        <option value="$PROJECT_DIR$/src/main/java/search/lanka/core/repository/mongo/MongoVendorRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/search/lanka/core/repository/VendorPostRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/search/lanka/core/repository/mongo/MongoVendorPostRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/search/lanka/core/repository/TagRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/search/lanka/core/repository/mongo/MongoTagRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/search/lanka/core/repository/VendorRepository.java" />
       </list>
     </option>
   </component>
@@ -220,128 +192,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search-lanka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search-lanka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search-lanka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search-lanka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search-lanka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search-lanka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lanka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search-lanka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search-lanka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lanka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search-lanka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search-lanka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lanka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane">
@@ -379,6 +229,12 @@
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="search.lanka.repository.mongo" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="search.lanka.core.repository" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="search.lanka.core.repository.mongo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -514,7 +370,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -533,7 +389,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924242" sideWeight="0.6704" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924242" sideWeight="0.6704" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -639,70 +495,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/repository/mongo/MongoVendorRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.5008347" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/repository/mongo/MongoVendorPostRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="28" selection-start="391" selection-end="392" vertical-scroll-proportion="0.37562606" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="48" selection-start="607" selection-end="607" vertical-scroll-proportion="0.4006678">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/search/lanka/core/repository/mongo/MongoVendorPostRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="42" selection-start="351" selection-end="380" vertical-scroll-proportion="0.3639399" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/repository/VendorRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="138" selection-end="138" vertical-scroll-proportion="0.22537562" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/repository/VendorPostRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="125" selection-end="125" vertical-scroll-proportion="0.22537562" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/todo.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/service/impl/VendorServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="51" selection-start="745" selection-end="745" vertical-scroll-proportion="0.6010017" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/controller/VendorProfileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="84" selection-end="84" vertical-scroll-proportion="0.15025042">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/service/VendorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="11" selection-start="213" selection-end="213" vertical-scroll-proportion="0.32554257" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/search-lanka-context.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.82887703">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/domain/VendorPost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="23" selection-start="53" selection-end="63" vertical-scroll-proportion="0.12676056">
           <folding />
         </state>
       </provider>
@@ -716,23 +511,102 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/domain/Vendor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="14" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
+        <state line="2" column="14" selection-start="49" selection-end="49" vertical-scroll-proportion="0.059859157">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/domain/Tag.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0/src.zip!/java/lang/Override.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
+        <state line="50" column="18" selection-start="971" selection-end="971" vertical-scroll-proportion="0.7513711">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jmkgreen/morphia/morphia/1.2.3/morphia-1.2.3.jar!/com/github/jmkgreen/morphia/dao/DAO.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="17" selection-start="178" selection-end="178" vertical-scroll-proportion="0.16699411">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jmkgreen/morphia/morphia/1.2.3/morphia-1.2.3.jar!/com/github/jmkgreen/morphia/dao/BasicDAO.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="174" selection-end="174" vertical-scroll-proportion="0.16037735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/repository/VendorPostRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="4" selection-start="431" selection-end="483" vertical-scroll-proportion="0.35915494">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/repository/mongo/MongoVendorPostRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="96" selection-start="648" selection-end="648" vertical-scroll-proportion="0.3107861">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/repository/mongo/MongoTagRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="52" selection-start="500" selection-end="500" vertical-scroll-proportion="0.3418647">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/repository/TagRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="26" selection-start="362" selection-end="362" vertical-scroll-proportion="0.50880283">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/repository/VendorRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="73" selection-start="448" selection-end="448" vertical-scroll-proportion="0.32922536">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="247" selection-end="309" vertical-scroll-proportion="0.7183099">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/domain/VendorPost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="7" selection-start="183" selection-end="183" vertical-scroll-proportion="0.24647887">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/domain/Location.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="69" selection-start="277" selection-end="277" vertical-scroll-proportion="0.38908452">
+        <state line="9" column="7" selection-start="130" selection-end="130" vertical-scroll-proportion="0.20950705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/domain/Tag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="4" selection-start="222" selection-end="225" vertical-scroll-proportion="0.32922536">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/search/lanka/core/repository/mongo/MongoVendorRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="42" selection-start="459" selection-end="486" vertical-scroll-proportion="0.08098592">
           <folding />
         </state>
       </provider>

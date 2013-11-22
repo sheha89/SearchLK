@@ -13,14 +13,20 @@ db-scripts
 getPostsByVendor
 getPostByTitle
 getPostsByCategory
-getLocationsByVendor
-getAllVendors
-getVendorsByCategory
-getVendorsByLocation
-getAllCategories
+getPostsBytag
+
 getTagsAllTags
 getTagsByVendor
 getTagsByPost
-getPostsBytag
+
+getLocationsByVendor
+getAllCategories
+
+getVendorsAllVendors
+getVendorsByCategory
+getVendorsByLocation
+
+
+
 
 

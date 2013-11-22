@@ -1,5 +1,7 @@
 package search.lanka.core.domain;
 
+import com.github.jmkgreen.morphia.annotations.Id;
+
 /**
  *
  */
@@ -7,6 +9,7 @@ public class VendorPost {
 
     public static String VENDOR_ID = "vendor_id";
 
+    @Id
     private String post_id;
     private String title;
     private String description;

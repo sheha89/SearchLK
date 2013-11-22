@@ -1,5 +1,6 @@
 package search.lanka.core.domain;
 
+import com.github.jmkgreen.morphia.annotations.Id;
 import org.springframework.beans.propertyeditors.StringArrayPropertyEditor;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
  */
 public class Tag {
 
+    @Id
     private String tag_id;
     private String title;
     private String description;

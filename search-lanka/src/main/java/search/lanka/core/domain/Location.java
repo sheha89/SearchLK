@@ -1,10 +1,13 @@
 package search.lanka.core.domain;
 
+import com.github.jmkgreen.morphia.annotations.Id;
+
 /**
  *
  */
 public class Location {
 
+    @Id
     private String location_id;
     private String location;
     private String country;
