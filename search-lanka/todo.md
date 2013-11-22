@@ -1,4 +1,7 @@
 Test log4j integration
+Write test cases for new ones
+Category ?
+
 
 
 SearchLK

@@ -13,7 +13,7 @@ import java.util.List;
 /**
  *
  */
-public interface VendorRepository extends BasicDAO<Vendor, ObjectId> {
+public interface VendorRepository extends DAO<Vendor, ObjectId> {
 
     @Override
     Key<Vendor> save(Vendor vendor);

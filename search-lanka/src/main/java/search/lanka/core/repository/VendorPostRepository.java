@@ -4,6 +4,7 @@ import com.github.jmkgreen.morphia.Key;
 import com.github.jmkgreen.morphia.dao.BasicDAO;
 import com.github.jmkgreen.morphia.dao.DAO;
 import com.google.common.base.Optional;
+import org.bson.types.ObjectId;
 import search.lanka.core.domain.VendorPost;
 
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.List;
 /**
  *
  */
-public interface VendorPostRepository implements DAO<VendorPost, K> {
+public interface VendorPostRepository extends DAO<VendorPost, ObjectId> {
 
     @Override
     Key<VendorPost> save(VendorPost vendorPost);
