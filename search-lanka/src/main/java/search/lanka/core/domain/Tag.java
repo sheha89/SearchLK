@@ -10,6 +10,8 @@ import java.util.List;
  */
 public class Tag {
 
+    public static String TAG_ID = "tag_id";
+
     @Id
     private String tag_id;
     private String title;
@@ -47,4 +49,20 @@ public class Tag {
     public void setUrls(List<String> urls) {
         this.urls = urls;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("Tag [tag_id=");
+        builder.append(tag_id);
+        builder.append(", title=");
+        builder.append(title);
+        builder.append(", description=");
+        builder.append(description);
+        builder.append("urls=");
+        builder.append(urls);
+        builder.append("]");
+        return builder.toString();
+    }
+
 }

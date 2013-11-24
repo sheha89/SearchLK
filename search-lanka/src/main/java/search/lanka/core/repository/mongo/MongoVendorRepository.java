@@ -27,24 +27,27 @@ public class MongoVendorRepository extends BasicDAO<Vendor, ObjectId> implements
     }
 
     @Override
-    public Optional<Vendor> findVendorsById(String id) {
-        Vendor vendor = ds.find(entityClazz, Vendor.VENDOR_ID, id).get();
+    public Optional<Vendor> findVendorsById(String vendor_id) {
+        Vendor vendor = ds.find(Vendor.class, Vendor.VENDOR_ID, vendor_id).get();
         return Optional.fromNullable(vendor);
     }
 
     @Override
     public List<Vendor> findAllVendors() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        List<Vendor> vendors = ds.find(Vendor.class).asList();
+        return vendors;
     }
 
     @Override
     public List<Vendor> findVendorsByCategoryId(String categoryId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        List<Vendor> vendors = ds.find(Vendor.class, Vendor.CATEGORY_ID, categoryId).asList();
+        return vendors;
     }
 
     @Override
     public List<Vendor> findVendorsByLocationId(String locationId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        List<Vendor> vendors = ds.find(Vendor.class, Vendor.LOCATION_ID, locationId).asList();
+        return vendors;
     }
 
     @Override

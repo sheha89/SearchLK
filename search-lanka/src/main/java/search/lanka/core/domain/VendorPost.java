@@ -8,6 +8,8 @@ import com.github.jmkgreen.morphia.annotations.Id;
 public class VendorPost {
 
     public static String VENDOR_ID = "vendor_id";
+    public static String TITLE = "title";
+    public static String POST_ID = "post_id";
 
     @Id
     private String post_id;
@@ -64,6 +66,23 @@ public class VendorPost {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("VendorPost [post_id=");
+        builder.append(post_id);
+        builder.append(", title=");
+        builder.append(title);
+        builder.append(", description=");
+        builder.append(description);
+        builder.append("image=");
+        builder.append(image);
+        builder.append("vendor_id=");
+        builder.append(vendor_id);
+        builder.append("]");
+        return builder.toString();
     }
 
 }

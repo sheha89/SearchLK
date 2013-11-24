@@ -7,30 +7,35 @@ import com.github.jmkgreen.morphia.annotations.Id;
  */
 public class Vendor {
 
-    public static String  VENDOR_NAME = "name";
-    public static String VENDOR_ID = "_id";
+    public static String VENDOR_NAME = "name";
+    public static String VENDOR_ID = "vendor_id";
+    public static String CATEGORY_ID = "category_id";
+    public static String LOCATION_ID = "location_id";
 
     @Id
-    private String _id;
+    private String vendor_id;
     private String name;
     private String about;
+    private String category_id;
+    private String location_id;
+    private String username;
+    private String password;
 
     public Vendor() {
     }
 
-    public Vendor(String about, String _id, String name) {
+    public Vendor(String about, String vendor_id, String name) {
         this.about = about;
-        this._id = _id;
+        this.vendor_id = vendor_id;
         this.name = name;
     }
 
-
-    public String get_id() {
-        return _id;
+    public String getVendor_id() {
+        return vendor_id;
     }
 
-    public void set_id(String _id) {
-        this._id = _id;
+    public void setVendor_id(String vendor_id) {
+        this.vendor_id = vendor_id;
     }
 
     public String getName() {
@@ -49,17 +54,57 @@ public class Vendor {
         this.about = about;
     }
 
-//    @Override
-//    public String toString() {
-//        StringBuilder builder = new StringBuilder();
-//        builder.append("Vendor [_id=");
-//        builder.append(_id);
-//        builder.append(", name=");
-//        builder.append(name);
-//        builder.append(", about=");
-//        builder.append(about);
-//        builder.append("]");
-//        return builder.toString();
-//    }
+    public String getCategory_id() {
+        return category_id;
+    }
+
+    public void setCategory_id(String category_id) {
+        this.category_id = category_id;
+    }
+
+    public String getLocation_id() {
+        return location_id;
+    }
+
+    public void setLocation_id(String location_id) {
+        this.location_id = location_id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("Vendor [vendor_id=");
+        builder.append(vendor_id);
+        builder.append(", name=");
+        builder.append(name);
+        builder.append(", about=");
+        builder.append(about);
+        builder.append("category_id=");
+        builder.append(category_id);
+        builder.append("location_id=");
+        builder.append(location_id);
+        builder.append(", username=");
+        builder.append(username);
+        builder.append(", password=");
+        builder.append(password);
+        builder.append("]");
+        return builder.toString();
+    }
 
 }

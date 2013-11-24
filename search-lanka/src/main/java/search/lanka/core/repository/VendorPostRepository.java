@@ -17,7 +17,7 @@ public interface VendorPostRepository extends DAO<VendorPost, ObjectId> {
     @Override
     Key<VendorPost> save(VendorPost vendorPost);
 
-    Optional<VendorPost> findVendorPostsById(String id);
+    Optional<VendorPost> findVendorPostsById(String postId);
 
     List<VendorPost> findPostsByVendorId(String vendorId);
 

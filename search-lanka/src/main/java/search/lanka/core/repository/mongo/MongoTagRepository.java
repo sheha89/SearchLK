@@ -3,6 +3,7 @@ package search.lanka.core.repository.mongo;
 import com.github.jmkgreen.morphia.Key;
 import com.github.jmkgreen.morphia.dao.BasicDAO;
 import com.google.common.base.Optional;
+import com.mongodb.WriteConcern;
 import org.bson.types.ObjectId;
 import search.lanka.core.config.MongoDataStore;
 import search.lanka.core.domain.Tag;
@@ -22,12 +23,14 @@ public class MongoTagRepository extends BasicDAO<Tag, ObjectId> implements TagRe
 
     @Override
     public Key<Tag> save(Tag tag) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        Key<Tag> save = super.save(tag, WriteConcern.SAFE);
+        return save;
     }
 
     @Override
-    public Optional<Tag> findTagsById(String id) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public Optional<Tag> findTagsById(String tagId) {
+        Tag tag = ds.find(Tag.class, Tag.TAG_ID, tagId).get();
+        return Optional.fromNullable(tag);
     }
 
     @Override
@@ -37,11 +40,11 @@ public class MongoTagRepository extends BasicDAO<Tag, ObjectId> implements TagRe
 
     @Override
     public List<Tag> findAllTags() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return ds.find(Tag.class).asList();
     }
 
     @Override
-    public List<Tag> findTagsByVendorId() {
+    public List<Tag> findTagsByVendorId(String vendorId) {
         return null;  //To change body of implemented methods use File | Settings | File Templates.
     }
 }

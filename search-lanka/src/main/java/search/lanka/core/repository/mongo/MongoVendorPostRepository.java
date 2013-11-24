@@ -27,8 +27,9 @@ public class MongoVendorPostRepository extends BasicDAO<VendorPost, ObjectId> im
     }
 
     @Override
-    public Optional<VendorPost> findVendorPostsById(String id) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public Optional<VendorPost> findVendorPostsById(String postId) {
+        VendorPost vendorPost = ds.find(VendorPost.class, VendorPost.POST_ID, postId ).get();
+        return Optional.fromNullable(vendorPost);
     }
 
     @Override
@@ -39,7 +40,8 @@ public class MongoVendorPostRepository extends BasicDAO<VendorPost, ObjectId> im
 
     @Override
     public List<VendorPost> findPostsByTitle(String title) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        List<VendorPost> posts = ds.find(VendorPost.class, VendorPost.TITLE, title).asList();
+        return posts;
     }
 
     @Override

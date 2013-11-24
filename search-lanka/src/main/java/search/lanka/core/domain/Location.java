@@ -89,4 +89,30 @@ public class Location {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("VendorPost [location_id=");
+        builder.append(location_id);
+        builder.append(", location=");
+        builder.append(location);
+        builder.append(", country=");
+        builder.append(country);
+        builder.append("city=");
+        builder.append(city);
+        builder.append(", state_province=");
+        builder.append(state_province);
+        builder.append("zip_code=");
+        builder.append(zip_code);
+        builder.append(", latitude=");
+        builder.append(latitude);
+        builder.append(", longitude=");
+        builder.append(longitude);
+        builder.append("address=");
+        builder.append(address);
+        builder.append("]");
+        return builder.toString();
+    }
+
 }

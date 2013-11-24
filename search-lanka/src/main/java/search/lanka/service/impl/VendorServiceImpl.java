@@ -1,6 +1,7 @@
 package search.lanka.service.impl;
 
 import search.lanka.core.domain.VendorPost;
+import search.lanka.core.repository.mongo.MongoTagRepository;
 import search.lanka.core.repository.mongo.MongoVendorPostRepository;
 import search.lanka.core.repository.mongo.MongoVendorRepository;
 import search.lanka.service.VendorService;
@@ -14,6 +15,7 @@ public class VendorServiceImpl implements VendorService {
 
     private MongoVendorRepository mongoVendorRepository;
     private MongoVendorPostRepository mongoVendorPostRepository;
+    private MongoTagRepository mongoTagRepository;
 
     @Override
     public List<VendorPost> getVendorPostsByVendor(String vendorId) {
@@ -31,6 +33,10 @@ public class VendorServiceImpl implements VendorService {
 
     public void setMongoVendorPostRepository(MongoVendorPostRepository mongoVendorPostRepository) {
         this.mongoVendorPostRepository = mongoVendorPostRepository;
+    }
+
+    public void setMongoTagRepository(MongoTagRepository mongoTagRepository) {
+        this.mongoTagRepository = mongoTagRepository;
     }
 
 }

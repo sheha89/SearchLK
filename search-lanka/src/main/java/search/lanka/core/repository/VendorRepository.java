@@ -18,7 +18,7 @@ public interface VendorRepository extends DAO<Vendor, ObjectId> {
     @Override
     Key<Vendor> save(Vendor vendor);
 
-    Optional<Vendor> findVendorsById(String id);
+    Optional<Vendor> findVendorsById(String vendor_id);
 
     List<Vendor> findAllVendors();
 
@@ -27,4 +27,5 @@ public interface VendorRepository extends DAO<Vendor, ObjectId> {
     List<Vendor> findVendorsByLocationId(String locationId);
 
     Optional<Vendor> findVendorByPostId(String postId);
+
 }

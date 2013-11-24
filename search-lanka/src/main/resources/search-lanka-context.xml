@@ -16,8 +16,7 @@
           init-method="init" p:host="${mongoDb.host}" p:port="${mongoDb.port}"
           p:dbName="${mongoDb.dbName}"/>
 
-    <bean id="mongoVendorRepository"
-          class="search.lanka.core.repository.mongo.MongoVendorRepository">
+    <bean id="mongoVendorRepository" class="search.lanka.core.repository.mongo.MongoVendorRepository">
         <constructor-arg index="0" ref="mongoDataStore"/>
     </bean>
 
@@ -25,9 +24,14 @@
         <constructor-arg index="0" ref="mongoDataStore"/>
     </bean>
 
+    <bean id="mongoTagRepository" class="search.lanka.core.repository.mongo.MongoTagRepository">
+        <constructor-arg index="0" ref="mongoDataStore"/>
+    </bean>
+
     <bean id="vendorServiceImpl" class="search.lanka.service.impl.VendorServiceImpl"
           p:mongoVendorRepository-ref="mongoVendorRepository"
           p:mongoVendorPostRepository-ref="mongoVendorPostRepository">
+          p:mongoTagRepository-ref="mongoTagRepository"/>
     </bean>
 
 </beans>

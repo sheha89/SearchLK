@@ -16,12 +16,12 @@ public interface TagRepository extends DAO<Tag, ObjectId> {
     @Override
     Key<Tag> save(Tag tag);
 
-    Optional<Tag> findTagsById(String id);
+    Optional<Tag> findTagsById(String tagId);
 
     List<Tag> findTagsByPostId(String postId);
 
     List<Tag> findAllTags();
 
-    List<Tag> findTagsByVendorId();
+    List<Tag> findTagsByVendorId(String vendorId);
 
 }
