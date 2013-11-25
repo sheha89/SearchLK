@@ -2,6 +2,8 @@ package search.lanka.core.domain;
 
 import com.github.jmkgreen.morphia.annotations.Id;
 
+import java.util.List;
+
 /**
  *
  */
@@ -17,6 +19,7 @@ public class VendorPost {
     private String description;
     private String image;
     private String vendor_id;
+    private List<String> tags;
 
     public VendorPost() {
     }
@@ -68,21 +71,29 @@ public class VendorPost {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("VendorPost [post_id=");
-        builder.append(post_id);
-        builder.append(", title=");
-        builder.append(title);
-        builder.append(", description=");
-        builder.append(description);
-        builder.append("image=");
-        builder.append(image);
-        builder.append("vendor_id=");
-        builder.append(vendor_id);
-        builder.append("]");
-        return builder.toString();
+    public List<String> getTags() {
+        return tags;
     }
+
+    public void setTags(List<String> tags) {
+        this.tags = tags;
+    }
+
+//    @Override
+//    public String toString() {
+//        StringBuilder builder = new StringBuilder();
+//        builder.append("VendorPost [post_id=");
+//        builder.append(post_id);
+//        builder.append(", title=");
+//        builder.append(title);
+//        builder.append(", description=");
+//        builder.append(description);
+//        builder.append("image=");
+//        builder.append(image);
+//        builder.append("vendor_id=");
+//        builder.append(vendor_id);
+//        builder.append("]");
+//        return builder.toString();
+//    }
 
 }

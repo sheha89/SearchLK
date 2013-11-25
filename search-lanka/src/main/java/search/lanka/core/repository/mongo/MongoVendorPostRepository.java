@@ -46,12 +46,12 @@ public class MongoVendorPostRepository extends BasicDAO<VendorPost, ObjectId> im
 
     @Override
     public List<VendorPost> findPostsByCategoryId(String categoryId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
     @Override
     public List<VendorPost> findPostsByTagId(String tagId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
 }

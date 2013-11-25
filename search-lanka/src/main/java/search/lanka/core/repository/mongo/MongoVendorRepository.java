@@ -52,7 +52,7 @@ public class MongoVendorRepository extends BasicDAO<Vendor, ObjectId> implements
 
     @Override
     public Optional<Vendor> findVendorByPostId(String postId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
 }

@@ -5,7 +5,10 @@ import org.junit.Before;
 import org.junit.Test;
 import search.lanka.core.domain.Vendor;
 
+import java.util.List;
+
 import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
@@ -33,6 +36,7 @@ public class MongoVendorRepositoryTest extends AbstractMongoRepositoryTest{
         Optional<Vendor> tempVendor = mongoVendorRepository.findVendorsById(id);
         assertTrue("App should be available in db", tempVendor.isPresent());
         assertThat(name, is(tempVendor.get().getName()));
+        assertTrue(tempVendor.isPresent());
 
     }
 
@@ -49,4 +53,31 @@ public class MongoVendorRepositoryTest extends AbstractMongoRepositoryTest{
         assertThat(name, is(tempVendor.get().getName()));
     }
 
+    @Test
+    public void testFindAllVendors() throws Exception {
+        String id = "V003";
+        String name = "temp";
+        String about = "about temp";
+        Vendor vendor = new Vendor(id, name, about);
+        mongoVendorRepository.save(vendor);
+
+        List<Vendor> vendors = mongoVendorRepository.findAllVendors();
+        assertTrue("Vendors should be available in db", !vendors.isEmpty());
+        assertEquals(1, vendors.size());
+    }
+
+    @Test
+    public void testFindVendorsByCategoryId() throws Exception {
+
+    }
+
+    @Test
+    public void testFindVendorsByLocationId() throws Exception {
+
+    }
+
+    @Test
+    public void testFindVendorByPostId() throws Exception {
+
+    }
 }

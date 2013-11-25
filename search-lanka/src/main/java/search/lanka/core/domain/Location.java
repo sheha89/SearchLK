@@ -7,6 +7,9 @@ import com.github.jmkgreen.morphia.annotations.Id;
  */
 public class Location {
 
+    public static String VENDOR_ID = "vendor_id";
+    public static String LOCATION_ID = "location_id";
+
     @Id
     private String location_id;
     private String location;
@@ -17,6 +20,7 @@ public class Location {
     private String latitude;
     private String longitude;
     private String address;
+    private String vendor_id;
 
     public String getLocation_id() {
         return location_id;
@@ -115,4 +119,11 @@ public class Location {
         return builder.toString();
     }
 
+    public String getVendor_id() {
+        return vendor_id;
+    }
+
+    public void setVendor_id(String vendor_id) {
+        this.vendor_id = vendor_id;
+    }
 }

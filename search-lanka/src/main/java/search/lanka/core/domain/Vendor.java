@@ -2,6 +2,8 @@ package search.lanka.core.domain;
 
 import com.github.jmkgreen.morphia.annotations.Id;
 
+import java.util.List;
+
 /**
  *
  */
@@ -20,11 +22,12 @@ public class Vendor {
     private String location_id;
     private String username;
     private String password;
+    private List<String> categories;
 
     public Vendor() {
     }
 
-    public Vendor(String about, String vendor_id, String name) {
+    public Vendor(String vendor_id, String name, String about) {
         this.about = about;
         this.vendor_id = vendor_id;
         this.name = name;
@@ -86,25 +89,33 @@ public class Vendor {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Vendor [vendor_id=");
-        builder.append(vendor_id);
-        builder.append(", name=");
-        builder.append(name);
-        builder.append(", about=");
-        builder.append(about);
-        builder.append("category_id=");
-        builder.append(category_id);
-        builder.append("location_id=");
-        builder.append(location_id);
-        builder.append(", username=");
-        builder.append(username);
-        builder.append(", password=");
-        builder.append(password);
-        builder.append("]");
-        return builder.toString();
+    public List<String> getCategories() {
+        return categories;
     }
+
+    public void setCategories(List<String> categories) {
+        this.categories = categories;
+    }
+
+//    @Override
+//    public String toString() {
+//        StringBuilder builder = new StringBuilder();
+//        builder.append("Vendor [vendor_id=");
+//        builder.append(vendor_id);
+//        builder.append(", name=");
+//        builder.append(name);
+//        builder.append(", about=");
+//        builder.append(about);
+//        builder.append("category_id=");
+//        builder.append(category_id);
+//        builder.append("location_id=");
+//        builder.append(location_id);
+//        builder.append(", username=");
+//        builder.append(username);
+//        builder.append(", password=");
+//        builder.append(password);
+//        builder.append("]");
+//        return builder.toString();
+//    }
 
 }

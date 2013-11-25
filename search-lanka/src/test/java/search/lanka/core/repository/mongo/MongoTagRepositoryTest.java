@@ -6,10 +6,14 @@ import org.junit.Test;
 /**
  *
  */
-public class MongoTagRepositoryTest {
+public class MongoTagRepositoryTest extends AbstractMongoRepositoryTest{
+
+    MongoTagRepository mongoTagRepository;
+
     @Before
     public void setUp() throws Exception {
-
+        dataStore.getDb().getCollection("Tag").drop();
+        mongoTagRepository = new MongoTagRepository(dataStore);
     }
 
     @Test

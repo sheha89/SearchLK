@@ -9,6 +9,7 @@ search\lanka\core\repository\mongo\MongoVendorPostRepository.class
 search\lanka\core\repository\mongo\MongoTagRepository.class
 search\lanka\core\domain\Vendor.class
 search\lanka\core\config\MongoDataStore.class
+search\lanka\core\domain\Category.class
 search\lanka\core\domain\Location.class
 search\lanka\core\repository\VendorPostRepository.class
 search\lanka\controller\VendorProfileController.class

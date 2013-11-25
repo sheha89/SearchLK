@@ -1,9 +1,7 @@
 package search.lanka.service.impl;
 
 import search.lanka.core.domain.VendorPost;
-import search.lanka.core.repository.mongo.MongoTagRepository;
-import search.lanka.core.repository.mongo.MongoVendorPostRepository;
-import search.lanka.core.repository.mongo.MongoVendorRepository;
+import search.lanka.core.repository.mongo.*;
 import search.lanka.service.VendorService;
 
 import java.util.List;
@@ -16,6 +14,8 @@ public class VendorServiceImpl implements VendorService {
     private MongoVendorRepository mongoVendorRepository;
     private MongoVendorPostRepository mongoVendorPostRepository;
     private MongoTagRepository mongoTagRepository;
+    private MongoCategoryRepository mongoCategoryRepository;
+    private MongoLocationRepository mongoLocationRepository;
 
     @Override
     public List<VendorPost> getVendorPostsByVendor(String vendorId) {
@@ -39,4 +39,11 @@ public class VendorServiceImpl implements VendorService {
         this.mongoTagRepository = mongoTagRepository;
     }
 
+    public void setMongoCategoryRepository(MongoCategoryRepository mongoCategoryRepository) {
+        this.mongoCategoryRepository = mongoCategoryRepository;
+    }
+
+    public void setMongoLocationRepository(MongoLocationRepository mongoLocationRepository) {
+        this.mongoLocationRepository = mongoLocationRepository;
+    }
 }
