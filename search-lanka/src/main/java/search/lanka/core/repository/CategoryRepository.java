@@ -4,7 +4,6 @@ import com.github.jmkgreen.morphia.Key;
 import com.github.jmkgreen.morphia.dao.DAO;
 import org.bson.types.ObjectId;
 import search.lanka.core.domain.Category;
-import search.lanka.core.domain.Tag;
 
 import java.util.List;
 

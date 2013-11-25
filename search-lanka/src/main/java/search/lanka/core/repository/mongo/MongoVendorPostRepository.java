@@ -28,7 +28,7 @@ public class MongoVendorPostRepository extends BasicDAO<VendorPost, ObjectId> im
 
     @Override
     public Optional<VendorPost> findVendorPostsById(String postId) {
-        VendorPost vendorPost = ds.find(VendorPost.class, VendorPost.POST_ID, postId ).get();
+        VendorPost vendorPost = ds.find(VendorPost.class, VendorPost.POST_ID, postId).get();
         return Optional.fromNullable(vendorPost);
     }
 

@@ -33,3 +33,20 @@ getVendorsByLocation
 
 
 
+for names and tiles 
+ Pattern regex = Pattern.compile(name, Pattern.CASE_INSENSITIVE);
+
+
+private static final Logger LOGGER = LoggerFactory.getLogger(MongoSubscriberRepository.class);
+
+
+        ContactGroup result = ds.find(ContactGroup.class, ContactGroup.BULK_APP_ID, bulkAppId)
+                .filter(ContactGroup.GROUP_ID, groupId).get();
+
+
+        String appId = Strings.nullToEmpty(bulkAppId).trim();
+        if (appId.isEmpty())
+            return new MessageHistoryResp(ResponseCode.ERROR_CAN_NOT_SEARCH_WITH_NULL);
+
+
+memory can contain array of size of million which is not good

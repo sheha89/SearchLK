@@ -16,7 +16,7 @@ public interface TagRepository extends DAO<Tag, ObjectId> {
     @Override
     Key<Tag> save(Tag tag);
 
-    Optional<Tag> findTagsById(String tagId);
+    Optional<Tag> findTagById(String tagId);
 
     List<Tag> findTagsByPostId(String postId);
 

@@ -2,6 +2,7 @@ package search.lanka.core.domain;
 
 import com.github.jmkgreen.morphia.annotations.Id;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -12,7 +13,6 @@ public class VendorPost {
     public static String VENDOR_ID = "vendor_id";
     public static String TITLE = "title";
     public static String POST_ID = "post_id";
-
     @Id
     private String post_id;
     private String title;
@@ -20,6 +20,7 @@ public class VendorPost {
     private String image;
     private String vendor_id;
     private List<String> tags;
+    private Date createdDate;
 
     public VendorPost() {
     }
@@ -77,6 +78,14 @@ public class VendorPost {
 
     public void setTags(List<String> tags) {
         this.tags = tags;
+    }
+
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
     }
 
 //    @Override

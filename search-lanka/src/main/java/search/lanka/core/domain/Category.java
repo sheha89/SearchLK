@@ -53,19 +53,19 @@ public class Category {
         this.image = image;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Category [category_id=");
-        builder.append(category_id);
-        builder.append(", category_name=");
-        builder.append(category_name);
-        builder.append(", description=");
-        builder.append(description);
-        builder.append("image=");
-        builder.append(image);
-        builder.append("]");
-        return builder.toString();
-    }
+//    @Override
+//    public String toString() {
+//        StringBuilder builder = new StringBuilder();
+//        builder.append("Category [category_id=");
+//        builder.append(category_id);
+//        builder.append(", category_name=");
+//        builder.append(category_name);
+//        builder.append(", description=");
+//        builder.append(description);
+//        builder.append("image=");
+//        builder.append(image);
+//        builder.append("]");
+//        return builder.toString();
+//    }
 
 }

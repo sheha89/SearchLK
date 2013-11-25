@@ -27,7 +27,7 @@ public class MongoVendorRepository extends BasicDAO<Vendor, ObjectId> implements
     }
 
     @Override
-    public Optional<Vendor> findVendorsById(String vendor_id) {
+    public Optional<Vendor> findVendorById(String vendor_id) {
         Vendor vendor = ds.find(Vendor.class, Vendor.VENDOR_ID, vendor_id).get();
         return Optional.fromNullable(vendor);
     }
@@ -41,12 +41,6 @@ public class MongoVendorRepository extends BasicDAO<Vendor, ObjectId> implements
     @Override
     public List<Vendor> findVendorsByCategoryId(String categoryId) {
         List<Vendor> vendors = ds.find(Vendor.class, Vendor.CATEGORY_ID, categoryId).asList();
-        return vendors;
-    }
-
-    @Override
-    public List<Vendor> findVendorsByLocationId(String locationId) {
-        List<Vendor> vendors = ds.find(Vendor.class, Vendor.LOCATION_ID, locationId).asList();
         return vendors;
     }
 

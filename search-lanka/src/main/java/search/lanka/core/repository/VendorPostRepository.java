@@ -1,7 +1,6 @@
 package search.lanka.core.repository;
 
 import com.github.jmkgreen.morphia.Key;
-import com.github.jmkgreen.morphia.dao.BasicDAO;
 import com.github.jmkgreen.morphia.dao.DAO;
 import com.google.common.base.Optional;
 import org.bson.types.ObjectId;

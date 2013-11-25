@@ -28,14 +28,16 @@ public class MongoTagRepository extends BasicDAO<Tag, ObjectId> implements TagRe
     }
 
     @Override
-    public Optional<Tag> findTagsById(String tagId) {
+    public Optional<Tag> findTagById(String tagId) {
         Tag tag = ds.find(Tag.class, Tag.TAG_ID, tagId).get();
         return Optional.fromNullable(tag);
     }
 
+
+    //post repo
     @Override
     public List<Tag> findTagsByPostId(String postId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
     @Override
@@ -43,8 +45,9 @@ public class MongoTagRepository extends BasicDAO<Tag, ObjectId> implements TagRe
         return ds.find(Tag.class).asList();
     }
 
+    //post repo
     @Override
     public List<Tag> findTagsByVendorId(String vendorId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 }

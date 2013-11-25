@@ -9,6 +9,7 @@ public class Location {
 
     public static String VENDOR_ID = "vendor_id";
     public static String LOCATION_ID = "location_id";
+    public static String CITY = "city";
 
     @Id
     private String location_id;
@@ -94,31 +95,6 @@ public class Location {
         this.address = address;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("VendorPost [location_id=");
-        builder.append(location_id);
-        builder.append(", location=");
-        builder.append(location);
-        builder.append(", country=");
-        builder.append(country);
-        builder.append("city=");
-        builder.append(city);
-        builder.append(", state_province=");
-        builder.append(state_province);
-        builder.append("zip_code=");
-        builder.append(zip_code);
-        builder.append(", latitude=");
-        builder.append(latitude);
-        builder.append(", longitude=");
-        builder.append(longitude);
-        builder.append("address=");
-        builder.append(address);
-        builder.append("]");
-        return builder.toString();
-    }
-
     public String getVendor_id() {
         return vendor_id;
     }
@@ -126,4 +102,31 @@ public class Location {
     public void setVendor_id(String vendor_id) {
         this.vendor_id = vendor_id;
     }
+
+//    @Override
+//    public String toString() {
+//        StringBuilder builder = new StringBuilder();
+//        builder.append("VendorPost [location_id=");
+//        builder.append(location_id);
+//        builder.append(", location=");
+//        builder.append(location);
+//        builder.append(", country=");
+//        builder.append(country);
+//        builder.append("city=");
+//        builder.append(city);
+//        builder.append(", state_province=");
+//        builder.append(state_province);
+//        builder.append("zip_code=");
+//        builder.append(zip_code);
+//        builder.append(", latitude=");
+//        builder.append(latitude);
+//        builder.append(", longitude=");
+//        builder.append(longitude);
+//        builder.append("address=");
+//        builder.append(address);
+//        builder.append("]");
+//        return builder.toString();
+//    }
+
+
 }

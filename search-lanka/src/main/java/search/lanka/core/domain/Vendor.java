@@ -13,13 +13,10 @@ public class Vendor {
     public static String VENDOR_ID = "vendor_id";
     public static String CATEGORY_ID = "category_id";
     public static String LOCATION_ID = "location_id";
-
     @Id
     private String vendor_id;
     private String name;
     private String about;
-    private String category_id;
-    private String location_id;
     private String username;
     private String password;
     private List<String> categories;
@@ -55,22 +52,6 @@ public class Vendor {
 
     public void setAbout(String about) {
         this.about = about;
-    }
-
-    public String getCategory_id() {
-        return category_id;
-    }
-
-    public void setCategory_id(String category_id) {
-        this.category_id = category_id;
-    }
-
-    public String getLocation_id() {
-        return location_id;
-    }
-
-    public void setLocation_id(String location_id) {
-        this.location_id = location_id;
     }
 
     public String getUsername() {

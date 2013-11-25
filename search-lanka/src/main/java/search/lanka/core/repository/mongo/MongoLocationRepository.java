@@ -6,6 +6,7 @@ import com.mongodb.WriteConcern;
 import org.bson.types.ObjectId;
 import search.lanka.core.config.MongoDataStore;
 import search.lanka.core.domain.Location;
+import search.lanka.core.domain.Vendor;
 import search.lanka.core.repository.LocationRepository;
 
 import java.util.List;
@@ -28,6 +29,16 @@ public class MongoLocationRepository extends BasicDAO<Location, ObjectId> implem
 
     @Override
     public List<Location> findLocationsByVendorId(String vendorId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return ds.find(Location.class, Location.VENDOR_ID, vendorId).asList();
     }
+
+    //findVendorByLocationId
+
+    @Override
+    public List<String> findVendorsByLocationId(String locationId) {
+//        List<String> vendors = ds.find(Location.class, Location.LOCATION_ID, locationId).asList();
+        return null;
+    }
+
+
 }

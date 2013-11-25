@@ -33,7 +33,7 @@ public class MongoVendorRepositoryTest extends AbstractMongoRepositoryTest{
         Vendor vendor = new Vendor(id, name, about);
         mongoVendorRepository.save(vendor);
 
-        Optional<Vendor> tempVendor = mongoVendorRepository.findVendorsById(id);
+        Optional<Vendor> tempVendor = mongoVendorRepository.findVendorById(id);
         assertTrue("App should be available in db", tempVendor.isPresent());
         assertThat(name, is(tempVendor.get().getName()));
         assertTrue(tempVendor.isPresent());
@@ -48,7 +48,7 @@ public class MongoVendorRepositoryTest extends AbstractMongoRepositoryTest{
         Vendor vendor = new Vendor(id, name, about);
         mongoVendorRepository.save(vendor);
 
-        Optional<Vendor> tempVendor = mongoVendorRepository.findVendorsById(id);
+        Optional<Vendor> tempVendor = mongoVendorRepository.findVendorById(id);
         assertTrue("Vendor should be available in db", tempVendor.isPresent());
         assertThat(name, is(tempVendor.get().getName()));
     }

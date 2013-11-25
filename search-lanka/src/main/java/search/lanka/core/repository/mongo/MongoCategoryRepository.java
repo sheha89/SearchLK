@@ -22,4 +22,5 @@ public class MongoCategoryRepository extends BasicDAO<Category, ObjectId> implem
     public List<Category> findAllCategories() {
         return ds.find(Category.class).asList();
     }
+
 }

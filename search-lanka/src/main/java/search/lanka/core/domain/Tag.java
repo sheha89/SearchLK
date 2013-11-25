@@ -1,7 +1,6 @@
 package search.lanka.core.domain;
 
 import com.github.jmkgreen.morphia.annotations.Id;
-import org.springframework.beans.propertyeditors.StringArrayPropertyEditor;
 
 import java.util.List;
 
@@ -11,7 +10,6 @@ import java.util.List;
 public class Tag {
 
     public static String TAG_ID = "tag_id";
-
     @Id
     private String tag_id;
     private String title;
@@ -50,19 +48,19 @@ public class Tag {
         this.urls = urls;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Tag [tag_id=");
-        builder.append(tag_id);
-        builder.append(", title=");
-        builder.append(title);
-        builder.append(", description=");
-        builder.append(description);
-        builder.append("urls=");
-        builder.append(urls);
-        builder.append("]");
-        return builder.toString();
-    }
+//    @Override
+//    public String toString() {
+//        StringBuilder builder = new StringBuilder();
+//        builder.append("Tag [tag_id=");
+//        builder.append(tag_id);
+//        builder.append(", title=");
+//        builder.append(title);
+//        builder.append(", description=");
+//        builder.append(description);
+//        builder.append("urls=");
+//        builder.append(urls);
+//        builder.append("]");
+//        return builder.toString();
+//    }
 
 }
