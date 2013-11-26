@@ -2,6 +2,7 @@ package search.lanka.core.repository.mongo;
 
 import com.github.jmkgreen.morphia.Key;
 import com.github.jmkgreen.morphia.dao.BasicDAO;
+import com.google.common.base.Optional;
 import com.mongodb.WriteConcern;
 import org.bson.types.ObjectId;
 import search.lanka.core.config.MongoDataStore;
@@ -32,13 +33,10 @@ public class MongoLocationRepository extends BasicDAO<Location, ObjectId> implem
         return ds.find(Location.class, Location.VENDOR_ID, vendorId).asList();
     }
 
-    //findVendorByLocationId
-
     @Override
-    public List<String> findVendorsByLocationId(String locationId) {
-//        List<String> vendors = ds.find(Location.class, Location.LOCATION_ID, locationId).asList();
-        return null;
+    public Optional<String> findVendorByLocationId(String locationId) {
+        Optional<String> vendor = (Optional<String>) ds.find(Location.class, Location.LOCATION_ID, locationId).field(Location.VENDOR_ID);
+        return vendor;
     }
-
 
 }

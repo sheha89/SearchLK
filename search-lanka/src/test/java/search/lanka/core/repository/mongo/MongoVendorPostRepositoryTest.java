@@ -66,7 +66,7 @@ public class MongoVendorPostRepositoryTest extends AbstractMongoRepositoryTest{
         VendorPost vendorPost = new VendorPost(postId, title, description, vendor_id);
         mongoVendorPostRepository.save(vendorPost);
 
-        Optional<VendorPost> vendorPostsById = mongoVendorPostRepository.findVendorPostsById(postId);
+        Optional<VendorPost> vendorPostsById = mongoVendorPostRepository.findVendorPostById(postId);
         assertTrue("VendorPost should be available in db", vendorPostsById.isPresent());
         assertThat(title, is(vendorPostsById.get().getTitle()));
     }

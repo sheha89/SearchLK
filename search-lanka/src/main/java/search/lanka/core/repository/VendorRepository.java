@@ -22,6 +22,4 @@ public interface VendorRepository extends DAO<Vendor, ObjectId> {
 
     List<Vendor> findVendorsByCategoryId(String categoryId);
 
-    Optional<Vendor> findVendorByPostId(String postId);
-
 }

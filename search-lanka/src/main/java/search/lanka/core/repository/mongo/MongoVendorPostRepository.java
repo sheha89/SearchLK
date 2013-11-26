@@ -6,6 +6,7 @@ import com.google.common.base.Optional;
 import com.mongodb.WriteConcern;
 import org.bson.types.ObjectId;
 import search.lanka.core.config.MongoDataStore;
+import search.lanka.core.domain.Vendor;
 import search.lanka.core.domain.VendorPost;
 import search.lanka.core.repository.VendorPostRepository;
 
@@ -27,7 +28,7 @@ public class MongoVendorPostRepository extends BasicDAO<VendorPost, ObjectId> im
     }
 
     @Override
-    public Optional<VendorPost> findVendorPostsById(String postId) {
+    public Optional<VendorPost> findVendorPostById(String postId) {
         VendorPost vendorPost = ds.find(VendorPost.class, VendorPost.POST_ID, postId).get();
         return Optional.fromNullable(vendorPost);
     }
@@ -52,6 +53,11 @@ public class MongoVendorPostRepository extends BasicDAO<VendorPost, ObjectId> im
     @Override
     public List<VendorPost> findPostsByTagId(String tagId) {
         return null;
+    }
+
+    @Override
+    public Optional<Vendor> findVendorByPostId(String postId) {
+        return (Optional<Vendor>) ds.find(VendorPost.class, VendorPost.POST_ID, postId).field(Vendor.VENDOR_ID);
     }
 
 }

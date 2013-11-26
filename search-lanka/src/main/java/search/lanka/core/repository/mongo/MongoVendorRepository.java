@@ -44,9 +44,4 @@ public class MongoVendorRepository extends BasicDAO<Vendor, ObjectId> implements
         return vendors;
     }
 
-    @Override
-    public Optional<Vendor> findVendorByPostId(String postId) {
-        return null;
-    }
-
 }
