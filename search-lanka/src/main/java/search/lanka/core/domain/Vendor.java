@@ -1,6 +1,8 @@
 package search.lanka.core.domain;
 
 import com.github.jmkgreen.morphia.annotations.Id;
+import com.github.jmkgreen.morphia.annotations.Indexed;
+import com.github.jmkgreen.morphia.utils.IndexDirection;
 
 import java.util.List;
 
@@ -13,9 +15,13 @@ public class Vendor {
     public static String VENDOR_ID = "vendor_id";
     public static String CATEGORY_ID = "category_id";
     public static String LOCATION_ID = "location_id";
+
     @Id
     private String vendor_id;
+
+    @Indexed(value= IndexDirection.ASC, name="name_index", unique=false, dropDups=false)
     private String name;
+
     private String about;
     private String username;
     private String password;

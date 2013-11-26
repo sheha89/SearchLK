@@ -15,7 +15,7 @@ public class MongoCategoryRepository extends BasicDAO<Category, ObjectId> implem
 
     protected MongoCategoryRepository(final MongoDataStore mongoDs) {
         super(mongoDs.getDataStore());
-        getDatastore().ensureIndexes();
+        getDatastore().ensureIndexes();  //creates all defined with @Indexed //apply indexes
     }
 
     @Override

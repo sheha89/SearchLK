@@ -28,10 +28,20 @@
         <constructor-arg index="0" ref="mongoDataStore"/>
     </bean>
 
+    <bean id="mongoCategoryRepository" class="search.lanka.core.repository.mongo.MongoCategoryRepository">
+        <constructor-arg index="0" ref="mongoDataStore"/>
+    </bean>
+
+    <bean id="mongoLocationRepository" class="search.lanka.core.repository.mongo.MongoLocationRepository">
+        <constructor-arg index="0" ref="mongoDataStore"/>
+    </bean>
+
     <bean id="vendorServiceImpl" class="search.lanka.service.impl.VendorServiceImpl"
           p:mongoVendorRepository-ref="mongoVendorRepository"
-          p:mongoVendorPostRepository-ref="mongoVendorPostRepository">
-          p:mongoTagRepository-ref="mongoTagRepository"/>
+          p:mongoVendorPostRepository-ref="mongoVendorPostRepository"
+          p:mongoTagRepository-ref="mongoTagRepository"
+          p:mongoCategoryRepository-ref="mongoCategoryRepository"
+          p:mongoLocationRepository-ref="mongoLocationRepository">
     </bean>
 
 </beans>
