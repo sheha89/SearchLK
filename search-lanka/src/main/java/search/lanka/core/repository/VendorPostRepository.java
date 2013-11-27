@@ -4,6 +4,7 @@ import com.github.jmkgreen.morphia.Key;
 import com.github.jmkgreen.morphia.dao.DAO;
 import com.google.common.base.Optional;
 import org.bson.types.ObjectId;
+import search.lanka.core.domain.Tag;
 import search.lanka.core.domain.Vendor;
 import search.lanka.core.domain.VendorPost;
 
@@ -25,8 +26,10 @@ public interface VendorPostRepository extends DAO<VendorPost, ObjectId> {
 
     List<VendorPost> findPostsByCategoryId(String categoryId);
 
+    List<Tag> findTagsByPostId(String postId);
+
     List<VendorPost> findPostsByTagId(String tagId);
 
-    public Optional<Vendor> findVendorByPostId(String postId);
+    Optional<Vendor> findVendorByPostId(String postId);
 
 }

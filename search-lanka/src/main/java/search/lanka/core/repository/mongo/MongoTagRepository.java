@@ -34,11 +34,7 @@ public class MongoTagRepository extends BasicDAO<Tag, ObjectId> implements TagRe
     }
 
 
-    //post repo
-    @Override
-    public List<Tag> findTagsByPostId(String postId) {
-        return null;
-    }
+
 
     @Override
     public List<Tag> findAllTags() {

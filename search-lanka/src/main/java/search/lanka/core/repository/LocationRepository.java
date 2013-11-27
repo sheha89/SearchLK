@@ -17,8 +17,4 @@ public interface LocationRepository extends DAO<Location, ObjectId> {
     @Override
     Key<Location> save(Location location);
 
-    List<Location> findLocationsByVendorId(String vendorId);
-
-    Optional<String> findVendorByLocationId(String locationId);
-
 }

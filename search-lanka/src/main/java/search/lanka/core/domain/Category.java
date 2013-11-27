@@ -1,17 +1,25 @@
 package search.lanka.core.domain;
 
+import com.github.jmkgreen.morphia.annotations.Entity;
+import com.github.jmkgreen.morphia.annotations.EntityListeners;
 import com.github.jmkgreen.morphia.annotations.Id;
+
+import java.util.List;
 
 /**
  *
  */
+@Entity
 public class Category {
+
+    public static String CATEGORY_ID = "category_id";
 
     @Id
     private String category_id;
     private String category_name;
     private String description;
     private String image;
+    private List<String> vendors;
 
     public Category() {
     }
@@ -51,6 +59,14 @@ public class Category {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public List<String> getVendors() {
+        return vendors;
+    }
+
+    public void setVendors(List<String> vendors) {
+        this.vendors = vendors;
     }
 
 //    @Override

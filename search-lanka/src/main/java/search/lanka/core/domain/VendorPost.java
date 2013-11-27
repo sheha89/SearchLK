@@ -1,5 +1,6 @@
 package search.lanka.core.domain;
 
+import com.github.jmkgreen.morphia.annotations.Entity;
 import com.github.jmkgreen.morphia.annotations.Id;
 
 import java.util.Date;
@@ -8,11 +9,13 @@ import java.util.List;
 /**
  *
  */
+@Entity
 public class VendorPost {
 
     public static String VENDOR_ID = "vendor_id";
     public static String TITLE = "title";
     public static String POST_ID = "post_id";
+
     @Id
     private String post_id;
     private String title;
@@ -25,11 +28,12 @@ public class VendorPost {
     public VendorPost() {
     }
 
-    public VendorPost(String post_id, String title, String description, String vendor_id) {
+    public VendorPost(String post_id, String title, String description, String vendor_id, Date createdDate) {
         this.post_id = post_id;
         this.title = title;
         this.description = description;
         this.vendor_id = vendor_id;
+        this.createdDate = createdDate;
     }
 
     public String getPost_id() {

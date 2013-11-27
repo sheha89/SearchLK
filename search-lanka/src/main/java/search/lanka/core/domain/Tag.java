@@ -1,5 +1,6 @@
 package search.lanka.core.domain;
 
+import com.github.jmkgreen.morphia.annotations.Entity;
 import com.github.jmkgreen.morphia.annotations.Id;
 
 import java.util.List;
@@ -7,14 +8,20 @@ import java.util.List;
 /**
  *
  */
+@Entity
 public class Tag {
 
     public static String TAG_ID = "tag_id";
+
     @Id
     private String tag_id;
     private String title;
     private String description;
     private List<String> urls;
+    private List<String> posts;
+
+    public Tag() {
+    }
 
     public String getTag_id() {
         return tag_id;
@@ -46,6 +53,14 @@ public class Tag {
 
     public void setUrls(List<String> urls) {
         this.urls = urls;
+    }
+
+    public List<String> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<String> posts) {
+        this.posts = posts;
     }
 
 //    @Override

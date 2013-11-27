@@ -6,11 +6,13 @@ import com.google.common.base.Optional;
 import com.mongodb.WriteConcern;
 import org.bson.types.ObjectId;
 import search.lanka.core.config.MongoDataStore;
+import search.lanka.core.domain.Tag;
 import search.lanka.core.domain.Vendor;
 import search.lanka.core.domain.VendorPost;
 import search.lanka.core.repository.VendorPostRepository;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -41,12 +43,19 @@ public class MongoVendorPostRepository extends BasicDAO<VendorPost, ObjectId> im
 
     @Override
     public List<VendorPost> findPostsByTitle(String title) {
-        List<VendorPost> posts = ds.find(VendorPost.class, VendorPost.TITLE, title).asList();
+        Pattern regex = Pattern.compile(title, Pattern.CASE_INSENSITIVE);
+        List<VendorPost> posts = ds.find(VendorPost.class, VendorPost.TITLE, regex).asList();
         return posts;
     }
 
     @Override
     public List<VendorPost> findPostsByCategoryId(String categoryId) {
+        return null;
+    }
+
+    //post repo
+    @Override
+    public List<Tag> findTagsByPostId(String postId) {
         return null;
     }
 

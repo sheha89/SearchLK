@@ -1,5 +1,7 @@
 package search.lanka.core.domain;
 
+import com.github.jmkgreen.morphia.annotations.Embedded;
+import com.github.jmkgreen.morphia.annotations.Entity;
 import com.github.jmkgreen.morphia.annotations.Id;
 import com.github.jmkgreen.morphia.annotations.Indexed;
 import com.github.jmkgreen.morphia.utils.IndexDirection;
@@ -9,12 +11,11 @@ import java.util.List;
 /**
  *
  */
+@Entity
 public class Vendor {
 
     public static String VENDOR_NAME = "name";
     public static String VENDOR_ID = "vendor_id";
-    public static String CATEGORY_ID = "category_id";
-    public static String LOCATION_ID = "location_id";
 
     @Id
     private String vendor_id;
@@ -26,6 +27,9 @@ public class Vendor {
     private String username;
     private String password;
     private List<String> categories;
+
+    @Embedded
+    List<Location> locations;
 
     public Vendor() {
     }
@@ -76,6 +80,10 @@ public class Vendor {
         this.password = password;
     }
 
+    public void setLocations(List<Location> locations) {
+        this.locations = locations;
+    }
+
     public List<String> getCategories() {
         return categories;
     }
@@ -84,9 +92,13 @@ public class Vendor {
         this.categories = categories;
     }
 
+    public List<Location> getLocations() {
+        return locations;
+    }
+
 //    @Override
+//    StringBuilder builder = new StringBuilder();
 //    public String toString() {
-//        StringBuilder builder = new StringBuilder();
 //        builder.append("Vendor [vendor_id=");
 //        builder.append(vendor_id);
 //        builder.append(", name=");

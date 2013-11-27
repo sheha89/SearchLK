@@ -18,8 +18,6 @@ public interface TagRepository extends DAO<Tag, ObjectId> {
 
     Optional<Tag> findTagById(String tagId);
 
-    List<Tag> findTagsByPostId(String postId);
-
     List<Tag> findAllTags();
 
     List<Tag> findTagsByVendorId(String vendorId);

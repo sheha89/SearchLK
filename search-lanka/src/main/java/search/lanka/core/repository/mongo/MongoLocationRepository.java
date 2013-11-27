@@ -28,15 +28,4 @@ public class MongoLocationRepository extends BasicDAO<Location, ObjectId> implem
         return save;
     }
 
-    @Override
-    public List<Location> findLocationsByVendorId(String vendorId) {
-        return ds.find(Location.class, Location.VENDOR_ID, vendorId).asList();
-    }
-
-    @Override
-    public Optional<String> findVendorByLocationId(String locationId) {
-        Optional<String> vendor = (Optional<String>) ds.find(Location.class, Location.LOCATION_ID, locationId).field(Location.VENDOR_ID);
-        return vendor;
-    }
-
 }
