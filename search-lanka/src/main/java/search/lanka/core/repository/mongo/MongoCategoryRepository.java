@@ -1,8 +1,10 @@
 package search.lanka.core.repository.mongo;
 
+import com.github.jmkgreen.morphia.Key;
 import com.github.jmkgreen.morphia.dao.BasicDAO;
 import com.github.jmkgreen.morphia.query.Query;
 import com.google.common.base.Optional;
+import com.mongodb.WriteConcern;
 import org.bson.types.ObjectId;
 import search.lanka.core.config.MongoDataStore;
 import search.lanka.core.domain.Category;
@@ -19,6 +21,11 @@ public class MongoCategoryRepository extends BasicDAO<Category, ObjectId> implem
     protected MongoCategoryRepository(final MongoDataStore mongoDs) {
         super(mongoDs.getDataStore());
         getDatastore().ensureIndexes();  //creates all defined with @Indexed //apply indexes
+    }
+
+    @Override
+    public Key<Category> save(final Category category) {
+        return super.save(category, WriteConcern.SAFE);
     }
 
     @Override

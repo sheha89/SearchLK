@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 import search.lanka.core.domain.VendorPost;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -30,8 +32,12 @@ public class MongoVendorPostRepositoryTest extends AbstractMongoRepositoryTest{
         String description = "Sample Post Description";
         String image = "../image/location";
         String vendor_id = "V001";
+        Date date = new Date("2013-12-12");
+        List<String> tags = new ArrayList<>();
+        tags.add("tag1"); tags.add("tag2");
 
-        VendorPost vendorPost = new VendorPost(postId, title, description, vendor_id);
+        VendorPost vendorPost = new VendorPost(postId, title, description, vendor_id, date);
+        vendorPost.setTags(tags);
         mongoVendorPostRepository.save(vendorPost);
 
         List<VendorPost> postsByVendorId = mongoVendorPostRepository.findPostsByVendorId(vendor_id);
@@ -47,8 +53,9 @@ public class MongoVendorPostRepositoryTest extends AbstractMongoRepositoryTest{
         String description = "Sample Post Description";
         String image = "../image/location";
         String vendor_id = "V001";
+        Date date = new Date("2013-12-12");
 
-        VendorPost vendorPost = new VendorPost(postId, title, description, vendor_id);
+        VendorPost vendorPost = new VendorPost(postId, title, description, vendor_id, date);
         mongoVendorPostRepository.save(vendorPost);
 
         List<VendorPost> postsByVendorId = mongoVendorPostRepository.findPostsByVendorId(vendor_id);
@@ -62,8 +69,9 @@ public class MongoVendorPostRepositoryTest extends AbstractMongoRepositoryTest{
         String description = "Sample Post Description";
         String image = "../image/location";
         String vendor_id = "V001";
+        Date date = new Date("2013-12-12");
 
-        VendorPost vendorPost = new VendorPost(postId, title, description, vendor_id);
+        VendorPost vendorPost = new VendorPost(postId, title, description, vendor_id, date);
         mongoVendorPostRepository.save(vendorPost);
 
         Optional<VendorPost> vendorPostsById = mongoVendorPostRepository.findVendorPostById(postId);
@@ -78,8 +86,9 @@ public class MongoVendorPostRepositoryTest extends AbstractMongoRepositoryTest{
         String description = "Sample Post Description";
         String image = "../image/location";
         String vendor_id = "V001";
+        Date date = new Date("2013-12-12");
 
-        VendorPost vendorPost = new VendorPost(postId, title, description, vendor_id);
+        VendorPost vendorPost = new VendorPost(postId, title, description, vendor_id, date);
         mongoVendorPostRepository.save(vendorPost);
 
         List<VendorPost> vendorPostsById = mongoVendorPostRepository.findPostsByTitle(title);

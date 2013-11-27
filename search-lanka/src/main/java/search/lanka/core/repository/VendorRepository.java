@@ -27,6 +27,6 @@ public interface VendorRepository extends DAO<Vendor, ObjectId> {
     List<Location> findLocationsByVendorId(String vendorId);
     //can be retrieved by    #findVendorById
 
-    Optional<Vendor> findVendorByLocationId(String locationId);
+    List<Vendor> findVendorsByLocation(String location);
 
 }

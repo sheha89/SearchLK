@@ -1,12 +1,19 @@
 package search.lanka.core.repository.mongo;
 
+import com.google.common.base.Optional;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import search.lanka.core.domain.Category;
 
-/**
- *
- */
-public class MongoCategoryRepositoryTest extends AbstractMongoRepositoryTest{
+import java.util.Collections;
+import java.util.List;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+
+public class MongoCategoryRepositoryTest extends AbstractMongoRepositoryTest {
 
     MongoCategoryRepository mongoCategoryRepository;
 
@@ -17,7 +24,66 @@ public class MongoCategoryRepositoryTest extends AbstractMongoRepositoryTest{
     }
 
     @Test
+    public void testSave() throws Exception {
+        String name = "Food";
+        String id = "CAT001";
+
+        Category category = new Category(id, name);
+        mongoCategoryRepository.save(category);
+
+        Optional<Category> categoriesById = mongoCategoryRepository.findCategoryById(id);
+        Assert.assertTrue("Category should be available in db", categoriesById.isPresent());
+        assertThat(name, is(categoriesById.get().getCategory_name()));
+        Assert.assertTrue(categoriesById.isPresent());
+
+    }
+
+    @Test
+    public void testFindCategoryById() throws Exception {
+        String name = "Food";
+        String id = "CAT002";
+
+        Category category = new Category(id, name);
+        mongoCategoryRepository.save(category);
+
+        Optional<Category> categoriesById = mongoCategoryRepository.findCategoryById(id);
+
+        Assert.assertTrue("Category should be available in db", categoriesById.isPresent());
+        assertThat(name, is(categoriesById.get().getCategory_name()));
+        Assert.assertTrue(categoriesById.isPresent());
+
+    }
+
+    @Test
     public void testFindAllCategories() throws Exception {
+        String name = "Food";
+        String id = "CAT003";
+
+        Category category = new Category(id, name);
+        mongoCategoryRepository.save(category);
+
+        List<Category> categories = mongoCategoryRepository.findAllCategories();
+        Assert.assertTrue("categories should be available in db", !categories.isEmpty());
+        assertEquals(1, categories.size());
+    }
+
+    @Test
+    public void testFindVendorsByCategoryId() throws Exception {
+        String name = "Food";
+        String id = "CAT004";
+//        Vendor vendor = new Vendor("110", "name", "about");
+//        List<Vendor> vendors = Collections.emptyList();
+//        vendors.add(vendor);
+
+        Category category = new Category(id, name);
+        mongoCategoryRepository.save(category);
+        List<String> vendors = Collections.emptyList();
+        vendors.add("110");
+        vendors.add("111");
+        category.setVendors(vendors);
+
+        List<String> vendorsByCategoryId = mongoCategoryRepository.findVendorsByCategoryId(id);
+        assertEquals(2, vendorsByCategoryId.size());
 
     }
 }

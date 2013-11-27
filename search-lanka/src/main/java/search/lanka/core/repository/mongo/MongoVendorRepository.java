@@ -2,6 +2,7 @@ package search.lanka.core.repository.mongo;
 
 import com.github.jmkgreen.morphia.Key;
 import com.github.jmkgreen.morphia.dao.BasicDAO;
+import com.github.jmkgreen.morphia.query.Query;
 import com.google.common.base.Optional;
 import com.mongodb.WriteConcern;
 import org.bson.types.ObjectId;
@@ -41,23 +42,31 @@ public class MongoVendorRepository extends BasicDAO<Vendor, ObjectId> implements
 
     @Override
     public List<String> findCategoriesByVendorId(String vendorId) {
-//        List<String> categories = ds.find(Vendor.class, Vendor.VENDOR_ID vendorId)
-//        return categories;
-
-        return null;
+        return this.findVendorById(vendorId).get().getCategories();
     }
 
     @Override
     public List<Location> findLocationsByVendorId(String vendorId) {
-//        return ds.find(Location.class, Location.VENDOR_ID, vendorId).asList();
-        return null;
+        return this.findVendorById(vendorId).get().getLocations();
     }
 
     @Override
-    public Optional<Vendor> findVendorByLocationId(String locationId) {
-//        Optional<Vendor> vendor = ds.find(Vendor.class, Vendor, locationId).field(Location.VENDOR_ID);
-//        return vendor;
-        return null;
+    public List<Vendor> findVendorsByLocation(String location) {
+        Query vendors = ds.createQuery(Vendor.class).field("Vendor.location.location").equal(location);
+        return vendors.asList();
+
+        /*
+        *         DBCollection tasksCollection = dataStore.getCollection("br_tasks");
+        BasicDBObject query = new BasicDBObject().append("br_request.message_data.bulkAppId", bulkAppId);
+
+        DBCursor cursor = tasksCollection.find(query).sort(new BasicDBObject("schedule_time", -1)).skip(lastSentIndex).limit(batchSize);
+        List<Task> tasks = new ArrayList<Task>();
+        while (cursor.hasNext()) {
+            tasks.add(Task.fromDbObject(cursor.next()));
+        }
+
+        return tasks;
+        * */
     }
 
 

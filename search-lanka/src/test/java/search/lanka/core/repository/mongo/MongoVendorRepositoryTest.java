@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import search.lanka.core.domain.Vendor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -30,7 +31,11 @@ public class MongoVendorRepositoryTest extends AbstractMongoRepositoryTest{
         String id = "V001";
         String name = "temp";
         String about = "about temp";
+        List<String> cats = new ArrayList<>();
+        cats.add("CAT1"); cats.add("CAT2");
+
         Vendor vendor = new Vendor(id, name, about);
+        vendor.setCategories(cats);
         mongoVendorRepository.save(vendor);
 
         Optional<Vendor> tempVendor = mongoVendorRepository.findVendorById(id);
