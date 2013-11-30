@@ -36,8 +36,8 @@ public class MongoVendorRepository extends BasicDAO<Vendor, ObjectId> implements
 
     @Override
     public List<Vendor> findAllVendors() {
-        List<Vendor> vendors = ds.find(Vendor.class).asList();
-        return vendors;
+        List<Vendor> vendorsList = ds.find(Vendor.class).asList();
+        return vendorsList;
     }
 
     @Override
@@ -54,6 +54,8 @@ public class MongoVendorRepository extends BasicDAO<Vendor, ObjectId> implements
     public List<Vendor> findVendorsByLocation(String location) {
         Query vendors = ds.createQuery(Vendor.class).field("Vendor.location.location").equal(location);
         return vendors.asList();
+
+
 
         /*
         *         DBCollection tasksCollection = dataStore.getCollection("br_tasks");

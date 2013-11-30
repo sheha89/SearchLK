@@ -3,9 +3,11 @@ package search.lanka.core.repository.mongo;
 import com.google.common.base.Optional;
 import org.junit.Before;
 import org.junit.Test;
+import search.lanka.core.domain.Location;
 import search.lanka.core.domain.Vendor;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -46,7 +48,7 @@ public class MongoVendorRepositoryTest extends AbstractMongoRepositoryTest{
     }
 
     @Test
-    public void testFindVendorsById() throws Exception {
+    public void testFindVendorById() throws Exception {
         String id = "V002";
         String name = "temp 02";
         String about = "about temp 02";
@@ -72,17 +74,62 @@ public class MongoVendorRepositoryTest extends AbstractMongoRepositoryTest{
     }
 
     @Test
-    public void testFindVendorsByCategoryId() throws Exception {
+    public void testFindCategoriesByVendorId() throws Exception {
+        String id = "V004";
+        String name = "temp";
+        String about = "about temp";
+        Vendor vendor = new Vendor(id, name, about);
+        vendor.setCategories(Arrays.asList("Cata1", "Cat2"));
+        mongoVendorRepository.save(vendor);
 
+        List<String> catsByVendor = mongoVendorRepository.findCategoriesByVendorId(id);
+        assertTrue("Vendors should be available in db", !catsByVendor.isEmpty());
+        assertEquals(2, catsByVendor.size());
     }
 
     @Test
-    public void testFindVendorsByLocationId() throws Exception {
+    public void testFindLocationsByVendorId() throws Exception {
+        String id = "V005";
+        String name = "temp";
+        String about = "about temp";
+        Vendor vendor = new Vendor(id, name, about);
+        vendor.setCategories(Arrays.asList("Cata1", "Cat2"));
 
+        String location_name = "msbola";
+        String city = "wattala";
+        String addy = "612/1/a";
+
+        Location location = new Location(location_name, city, addy);
+
+        vendor.setLocations(Arrays.asList(location));
+
+        mongoVendorRepository.save(vendor);
+
+        List<Location> locationsById = mongoVendorRepository.findLocationsByVendorId(id);
+        assertTrue("Locations should be available in db", locationsById.isEmpty());
+        assertEquals(1, locationsById.size());
     }
 
     @Test
-    public void testFindVendorByPostId() throws Exception {
+    public void testFindVendorsByLocation() throws Exception {
+        String id = "V006";
+        String name = "temp";
+        String about = "about temp";
+        Vendor vendor = new Vendor(id, name, about);
+        vendor.setCategories(Arrays.asList("Cata1", "Cat2"));
 
+        String location_name = "msbolaaa";
+        String city = "wattala";
+        String addy = "612/1/a";
+
+        Location location = new Location(location_name, city, addy);
+
+        vendor.setLocations(Arrays.asList(location));
+
+        mongoVendorRepository.save(vendor);
+
+        List<Vendor> ById = mongoVendorRepository.findVendorsByLocation(location_name);
+        assertTrue("Vendors should be available in db", ById.isEmpty());
+        assertEquals(1, ById.size());
     }
 }

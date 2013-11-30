@@ -24,7 +24,7 @@ public interface VendorService {
 
     List<Location> getLocationsByVendorId(String vendorId);
 
-    Optional<Vendor> getVendorByLocationId(String locationId);
+    List<Vendor> getVendorsByLocation(String locationId);
 
 
     //VendorPost
@@ -40,9 +40,9 @@ public interface VendorService {
 
     List<VendorPost> getPostsByTag(String tagId);
 
-    List<Tag> getTagsByPostId(String postId);
+    List<String> getTagsByPostId(String postId);
 
-    Optional<Vendor> findVendorByPostId(String postId);
+    String  getVendorByPostId(String postId);
 
 
     //Tag

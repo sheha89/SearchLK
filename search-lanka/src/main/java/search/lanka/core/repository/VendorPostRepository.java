@@ -26,10 +26,10 @@ public interface VendorPostRepository extends DAO<VendorPost, ObjectId> {
 
     List<VendorPost> findPostsByCategoryId(String categoryId);
 
-    List<Tag> findTagsByPostId(String postId);
+    List<String> findTagsByPostId(String postId);
 
     List<VendorPost> findPostsByTagId(String tagId);
 
-    Optional<Vendor> findVendorByPostId(String postId);
+    String findVendorByPostId(String postId);
 
 }

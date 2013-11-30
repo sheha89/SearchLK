@@ -22,6 +22,12 @@ public class Location {
     private String address;
     private String vendor_id;
 
+    public Location(String location, String city, String address) {
+        this.location = location;
+        this.city = city;
+        this.address = address;
+    }
+
     public String getLocation() {
         return location;
     }

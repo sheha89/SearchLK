@@ -54,90 +54,89 @@ public class VendorServiceImpl implements VendorService {
     }
 
     @Override
-    public Optional<Vendor> getVendorByLocationId(String locationId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public List<Vendor> getVendorsByLocation(String locationId) {
+        return mongoVendorRepository.findVendorsByLocation(locationId);
     }
 
     @Override
     public void createVendorPost(VendorPost vendorPost) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        mongoVendorPostRepository.save(vendorPost);
     }
 
     @Override
     public List<VendorPost> getVendorPostsByVendor(String vendorId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return mongoVendorPostRepository.findPostsByVendorId(vendorId);
     }
 
     @Override
     public Optional<VendorPost> getVendorPostsById(String postId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return mongoVendorPostRepository.findVendorPostById(postId);
     }
 
     @Override
     public List<VendorPost> getPostsByTitle(String title) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return mongoVendorPostRepository.findPostsByTitle(title);
     }
 
     @Override
     public List<VendorPost> getPostsByCategory(String categoryId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return mongoVendorPostRepository.findPostsByCategoryId(categoryId);
     }
 
     @Override
     public List<VendorPost> getPostsByTag(String tagId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return mongoVendorPostRepository.findPostsByTagId(tagId);
     }
 
     @Override
-    public List<Tag> getTagsByPostId(String postId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public List<String> getTagsByPostId(String postId) {
+        return mongoVendorPostRepository.findTagsByPostId(postId);
     }
 
     @Override
-    public Optional<Vendor> findVendorByPostId(String postId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public String getVendorByPostId(String postId) {
+        return mongoVendorPostRepository.findVendorByPostId(postId);
     }
 
     @Override
     public void createTag(Tag tag) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        mongoTagRepository.save(tag);
     }
 
     @Override
     public Optional<Tag> getTagById(String tagId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return mongoTagRepository.findTagById(tagId);
     }
 
     @Override
     public List<Tag> getAllTags() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return mongoTagRepository.findAllTags();
     }
 
     @Override
     public List<Tag> getTagsByVendorId(String vendorId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return mongoTagRepository.findTagsByVendorId(vendorId);
     }
 
     @Override
     public void createCategory(Category category) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        mongoCategoryRepository.save(category);
     }
 
     @Override
     public Optional<Category> getCategoryById(String category_id) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return mongoCategoryRepository.findCategoryById(category_id);
     }
 
     @Override
     public List<Category> getAllCategories() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return mongoCategoryRepository.findAllCategories();
     }
 
     @Override
     public List<String> getVendorsByCategoryId(String categoryId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return mongoCategoryRepository.findVendorsByCategoryId(categoryId);
     }
-
 
     public void setMongoVendorRepository(MongoVendorRepository mongoVendorRepository) {
         this.mongoVendorRepository = mongoVendorRepository;
@@ -158,4 +157,5 @@ public class VendorServiceImpl implements VendorService {
     public void setMongoLocationRepository(MongoLocationRepository mongoLocationRepository) {
         this.mongoLocationRepository = mongoLocationRepository;
     }
+
 }

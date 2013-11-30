@@ -33,7 +33,6 @@ public class MongoTagRepository extends BasicDAO<Tag, ObjectId> implements TagRe
         return Optional.fromNullable(tag);
     }
 
-
     @Override
     public List<Tag> findAllTags() {
         return ds.find(Tag.class).asList();

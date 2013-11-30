@@ -48,15 +48,16 @@ public class MongoVendorPostRepository extends BasicDAO<VendorPost, ObjectId> im
         return posts;
     }
 
+   //Service layer
     @Override
     public List<VendorPost> findPostsByCategoryId(String categoryId) {
         return null;
     }
 
-    //post repo
     @Override
-    public List<Tag> findTagsByPostId(String postId) {
-        return null;
+    public List<String> findTagsByPostId(String postId) {
+        List<String> tags = ds.find(VendorPost.class).get().getTags();
+        return tags;
     }
 
     @Override
@@ -65,8 +66,8 @@ public class MongoVendorPostRepository extends BasicDAO<VendorPost, ObjectId> im
     }
 
     @Override
-    public Optional<Vendor> findVendorByPostId(String postId) {
-        return (Optional<Vendor>) ds.find(VendorPost.class, VendorPost.POST_ID, postId).field(Vendor.VENDOR_ID);
+    public String findVendorByPostId(String postId) {
+        return ds.find(VendorPost.class, VendorPost.POST_ID, postId).get().getVendor_id();
     }
 
 }
