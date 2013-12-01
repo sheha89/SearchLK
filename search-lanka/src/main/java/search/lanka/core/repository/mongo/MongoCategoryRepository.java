@@ -30,7 +30,7 @@ public class MongoCategoryRepository extends BasicDAO<Category, ObjectId> implem
 
     @Override
     public Optional<Category> findCategoryById(String category_id) {
-        Category category = ds.find(Category.class, Vendor.VENDOR_ID, category_id).get();
+        Category category = ds.find(Category.class, Category.CATEGORY_ID, category_id).get();
         return Optional.fromNullable(category);
     }
 

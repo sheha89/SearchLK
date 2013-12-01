@@ -32,7 +32,7 @@ public class MongoVendorPostRepositoryTest extends AbstractMongoRepositoryTest{
         String description = "Sample Post Description";
         String image = "../image/location";
         String vendor_id = "V001";
-        Date date = new Date("2013-12-12");
+        Date date = new Date();
         List<String> tags = new ArrayList<>();
         tags.add("tag1"); tags.add("tag2");
 
@@ -53,7 +53,7 @@ public class MongoVendorPostRepositoryTest extends AbstractMongoRepositoryTest{
         String description = "Sample Post Description";
         String image = "../image/location";
         String vendor_id = "V001";
-        Date date = new Date("2013-12-12");
+        Date date = new Date();
 
         VendorPost vendorPost = new VendorPost(postId, title, description, vendor_id, date);
         mongoVendorPostRepository.save(vendorPost);
@@ -69,7 +69,7 @@ public class MongoVendorPostRepositoryTest extends AbstractMongoRepositoryTest{
         String description = "Sample Post Description";
         String image = "../image/location";
         String vendor_id = "V001";
-        Date date = new Date("2013-12-12");
+        Date date = new Date();
 
         VendorPost vendorPost = new VendorPost(postId, title, description, vendor_id, date);
         mongoVendorPostRepository.save(vendorPost);
@@ -86,7 +86,7 @@ public class MongoVendorPostRepositoryTest extends AbstractMongoRepositoryTest{
         String description = "Sample Post Description";
         String image = "../image/location";
         String vendor_id = "V001";
-        Date date = new Date("2013-12-12");
+        Date date = new Date();
 
         VendorPost vendorPost = new VendorPost(postId, title, description, vendor_id, date);
         mongoVendorPostRepository.save(vendorPost);

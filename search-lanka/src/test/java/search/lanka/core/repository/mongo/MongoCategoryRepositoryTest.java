@@ -6,11 +6,14 @@ import org.junit.Before;
 import org.junit.Test;
 import search.lanka.core.domain.Category;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThat;
 
 public class MongoCategoryRepositoryTest extends AbstractMongoRepositoryTest {
@@ -25,8 +28,8 @@ public class MongoCategoryRepositoryTest extends AbstractMongoRepositoryTest {
 
     @Test
     public void testSave() throws Exception {
-        String name = "Food";
         String id = "CAT001";
+        String name = "Food";
 
         Category category = new Category(id, name);
         mongoCategoryRepository.save(category);
@@ -76,14 +79,13 @@ public class MongoCategoryRepositoryTest extends AbstractMongoRepositoryTest {
 //        vendors.add(vendor);
 
         Category category = new Category(id, name);
+        category.setVendors(Arrays.asList("3232", "3233"));
         mongoCategoryRepository.save(category);
-        List<String> vendors = Collections.emptyList();
-        vendors.add("110");
-        vendors.add("111");
-        category.setVendors(vendors);
+
 
         List<String> vendorsByCategoryId = mongoCategoryRepository.findVendorsByCategoryId(id);
         assertEquals(2, vendorsByCategoryId.size());
+        assertFalse(vendorsByCategoryId.isEmpty());
 
     }
 }
